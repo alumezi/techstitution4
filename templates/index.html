@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CAAform</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+.jumbotron{
+    background-color:#2E2D88;
+    color:white;
+}
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+
+	
+<div class="container">
+
+<div class="page-header">
+<img src="http://caa-ks.org/wp-content/themes/caa/assets/images/logo_caa.svg" class="logo col-sm-12 col-md-8 col-lg-7">
+
+<h1>Occurrence Report</h1>
+
+</div>
+<p> ATS ENGINEERING</p>
+      <form id="form" class="main-form" data-parsley-validate="" method="POST">
+
+
+
+<div class="jumbotron">
+
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-5">
+		<p><abbr title="Are you concerned about the confidentiality of this report and wish to be contacted before it is processed? 
+If so, please ensure you provide us with your contact details.">CONFIDENTIAL?:</abbr>
+
+	<label>
+		<input type="radio" name="Conf" value="Yes"/> Yes
+		<input type="radio" name="Conf" value="No"/> No
+	</label>
+	</p>
+	</div>
+
+				<div class="col-md-7">
+				
+					
+					<div class="form-group">
+					 
+					<label for="Name">
+					Can the information be 
+					disseminated in the 
+					interests of flight safety?
+						
+					</label>
+					
+					<input type="radio"  name="Recordings"value="Yes"> Yes</a></li>
+					<input type="radio"  name="Recordings"value="No"> No</a></li>
+					</div>
+
+				
+			</div>
+
+
+	</div>
+	<div class="row">
+
+		<div class="col-md-3">
+			
+				<div class="form-group">
+					 
+					<label for="Occurrence">
+						Occurrence Location:
+					</label>
+					<input type="Operator" class="form-control" id="Occurrence" name="Occurrence" />
+				</div>
+				<div class="form-group">
+					 
+					<label for="Duration">
+						Duration:
+					</label>
+					<input type="Duration" class="form-control" id="Duration" name="Duration"/>
+				</div>
+				
+		
+		</div>
+		<div class="col-md-3">
+		
+				<div class="form-group">
+					 
+					<label for="Service">
+						Service Affected:
+					</label>
+					<input type="Service" class="form-control" id="Service" name="Service" />
+				</div>
+				<div class="form-group">
+					 
+					<label for="Equipment">
+							Equipment Type/Manufacturer:
+					</label>
+					<input type="Equipment" class="form-control" id="Equipment" name="Equipment" />
+				</div>
+				
+			
+		</div>
+		<div class="col-md-3">
+			
+				<div class="form-group">
+					 
+					<label for="Date and Time">
+						Date and Time:
+					</label>
+					<input type="datetime-local" name="daytime" class="form-control">
+				</div>
+				<div class="form-group">
+					 
+					<label for="Frequency">
+						Frequency:
+					</label>
+					<input type="Frequency" class="form-control" id="Frequency" name="Frequency" />
+				</div>
+				
+		
+		</div>
+
+		<div class="col-md-3">
+		
+				<div class="form-group">
+					 
+					<label for="Callsign">
+						Callsign:
+					</label>
+					<input type="Callsign" class="form-control" id="Callsign" name="Callsign" />
+				</div>
+				<div class="form-group">
+					 
+					<label for="Equipment">
+						Equipment Location:
+					</label>
+					<input type="Equipment" class="form-control" id="Equipment" name="Equipment" />
+				</div>
+	
+		</div>
+
+		</div>
+
+		<div class="row" >
+
+			
+
+
+			<div class="col-md-3">
+		
+					
+					<div class="form-group">
+					 
+					<label for="RTF">
+						<abbr title="Radar Sources">RTF Frequencies:</abbr>
+
+					</label>
+					<input type="RTF" class="form-control" id="RTF" name="RTF" />
+					</div>
+					</div>
+
+			<div class="col-md-3">
+			
+					
+					<div class="form-group">
+					 
+					<label for="Name">
+					Name:
+						
+					</label>
+						<input type="Name" class="form-control" id="Name" name="Name" />
+					</div>
+
+			
+			</div>
+
+			<div class="col-md-3">
+			
+					
+					<div class="form-group">
+					 
+					<label for="Name">
+					Organization/Position:
+						
+					</label>
+						<input type="Organization" class="form-control" id="Organization" name="Organization" />
+					</div>
+
+			
+			</div>
+
+
+			<div class="col-md-3">
+			
+					
+					<div class="form-group">
+					 
+					<label for="Name">
+					Start time/Duration of shift:
+						
+					</label>
+						<input type="Start" class="form-control" id="Start" name="Start" />
+					</div>
+
+
+			</div>
+			
+
+
+
+
+
+
+
+
+
+				</div>
+
+
+			<div class="row">
+
+			<div class="col-md-3">
+	
+
+		<div class="dropdown" >
+	  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">CATEGORIES
+	   						 <span class="caret"></span>
+	  						</button>
+	  						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				<li><a href="#"><input type="checkbox"  name="CATEGORIES" value="Accident" > Accident</a></li>
+  				<li><a href="#"><input type="checkbox"  name="CATEGORIES" value="Incident"> Incident</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="CATEGORIES" value="Procedural"> Procedural</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="CATEGORIES" value="Failure"> Failure</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="CATEGORIES" value="Hazard"> Hazard</a></li>
+						    </ul>
+						</div>
+		
+		</div>
+
+<div class="col-md-3">
+		
+
+		<div class="dropdown" >
+	  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Previous defects
+	   						 <span class="caret"></span>
+	  						</button>
+	  						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				<li><a href="#"><input type="checkbox"  name="Defects" value="Yes" > Yes</a></li>
+  				<li><a href="#"><input type="checkbox"  name="Defects" value="No"> No</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Defects" value="Not"> Not known</a></li>
+			  	
+						    </ul>
+						</div>
+		
+		</div>
+
+<div class="col-md-3">
+			
+
+		<div class="dropdown" >
+	  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">CATEGORIES
+	   						 <span class="caret"></span>
+	  						</button>
+	  						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+  				<li><a href="#"><input type="checkbox"  name="Categories" value="Planned"> Planned</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Categories" value="Servicable"> Servicable</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Categories" value="Degraded"> Degraded</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Categories" value="Routine" >Routine</a> </li>
+			  	<li><a href="#"><input type="checkbox"  name="Categories" value="Modification"> Modification</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Categories" value="Unplanned">Unplanned outage</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Categories" value="Unserviceable"> Unserviceable</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Categories" value="Corrective" >Corrective Maintenance</a> </li>
+			  	<li><a href="#"><input type="checkbox"  name="Categories" value="Replacement" >Replacement </a></li>
+			  	
+						    </ul>
+						</div>
+		
+		</div>
+
+<div class="col-md-3">
+		
+
+		<div class="dropdown" >
+	  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Facility Configuration
+	   						 <span class="caret"></span>
+	  						</button>
+	  						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+  				<li><a href="#"><input type="checkbox"  name="Facility" value="In service"> In service</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Facility" value="Out of service"> Out of service</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Facility" value="Main"> Main mode</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Facility" value="Standby" >Standby/test</a> </li>
+			  	<li><a href="#"><input type="checkbox"  name="Facility" value="Channel A">Channel A(1)</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Facility" value="Channel B">Channel B(2)</a></li>
+			  	<li><a href="#"><input type="checkbox"  name="Facility" value="Other"> Other</a></li>
+			  	
+						    </ul>
+						</div>
+	
+		</div>
+
+
+			</div>
+
+
+
+			<div class="row">
+			<div class="col-md-12">
+			
+		
+			    <div class="form-group">
+         		Narrative : <br />
+         		<textarea class="form-control" rows = "5" cols = "50" name = "description">
+            	Enter description here...
+         		</textarea>
+      	
+
+      		</div>
+      		</div>
+      		<div class="row">
+			<div class="col-md-12">
+
+			<div class="col-md-3">
+	
+				<div class="form-group">
+					 
+					<label for="">
+						Name:
+					</label>
+				</br>________________________________
+					<input type="Name" class="form-control" id="Name" name="Name" />
+				</div>
+			</div>
+
+			<div class="col-md-3">
+		
+				<div class="form-group">
+					 
+					<label for="Organisation/Position">
+						Organisation/Position:
+					</label>
+				</br>________________________________
+					<input type="Position" class="form-control" id="Position" name="Positon" />
+				</div>
+			</div>
+
+
+			<div class="col-md-3">
+			
+					
+					<div class="form-group">
+					 
+					<label for="Name">
+					Recordings impounded:
+						
+					</label>
+					</br>
+					<input type="radio"  name="Recordings"value="Yes"> Yes</a></li>
+					<input type="radio"  name="Recordings"value="No"> No</a></li>
+					Other:
+						<input type="Name" class="form-control" id="Name" />
+					</div>
+
+				
+			</div>
+
+				<div class="col-md-3">
+			
+					
+					<div class="form-group">
+					 
+					<label for="Name">
+					Other fault report action:
+						
+					</label>
+					</br>
+					<input type="radio"  name="Fault" value="ATC"> ATC Manual</a></li>
+					<input type="radio"  name="Fault" value="LP"> Local Reporting</a></li>
+					
+						<input type="Other" class="form-control" id="Other" name="Other" />
+					</div>
+
+			
+			</div>
+
+
+		      		<div class="row">
+			<div class="col-md-12">
+
+							<div class="col-md-3">
+						
+							<div class="form-group">
+					 
+					<label for="">
+						Start time and duration of shift:
+					</label>
+				
+					<input type="START" class="form-control" id="START" name="START"/>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+			
+					
+					<div class="form-group">
+					 
+					<label for="Address">
+						<abbr title="If the reporter wishes to be contacted privately">Address:</abbr>
+
+					</label>
+					<input type="Address" class="form-control" id="Address" name="Adress" />
+					</div>
+		
+			</div>
+
+
+			<div class="col-md-3">
+	
+				<div class="form-group">
+					 
+					<label for="Email">
+						Email@:
+					</label>
+				
+					<input type="Email" class="form-control" id="Email" name="Email" />
+				</div>
+			</div>
+
+				<div class="col-md-3">
+								
+					<div class="form-group">
+					 
+					<label for="Address">
+						<abbr title="If the reporter wishes to be contacted privately">Telephone number:</abbr>
+
+					</label>
+					<input type="Telephone" class="form-control" id="Telephone" name="Telephone" />
+					</div>
+		
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		<div class="col-md-12">
+	<input type="Submit" value="Submit" class="form-control" name="Submit" >
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+
+
+
+			</div>
+
+
+
+
+
+			</div>
+		</div>
+
+		
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</form>
+
+
+
+
+<footer class="container">
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			 <a id="modal-625009" href="#modal-container-625009" role="button" class="btn" data-toggle="modal">Help</a>
+			
+			<div class="modal fade" id="modal-container-625009" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							 
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								×
+							</button>
+							<h4 class="modal-title" id="myModalLabel">
+								ADVICE ON THE COMPLETION OF THE CAAK OCCURRENCE REPORT FORM – 
+								AACK/DSF/OR-FRM 01
+							</h4>
+						</div>
+						<div class="modal-body">
+						ADVICE ON THE COMPLETION OF THE CAAK ATS ENGINEERING OCCURRENCE REPORT FORM – AACK/DSF/OR-FRM 03
+
+USE AND EXPLANATION OF TERMS IN BOX 1
+
+Tick one or more category of Occurrence.
+
+ACCIDENT: 	A Kosovo reportable accident.
+
+INCIDENT: 	A reportable occurrence (see ‘General’).
+
+PROCEDURAL: 	A reportable occurrence attributed to procedural aspects including operation and maintenance of any facility on the ground.
+
+FAILURE: 	A reportable occurrence attributed to any defect in or malfunctioning of any facility on the ground.
+
+HAZARD: 	A potential accident, incident or failure.
+
+General:	A reportable occurrence is defined in the Regulation 1/2009 on Occurrence Reporting and TP 05 - Occurrence Reporting in Civil Aviation - Information and Guidance Manual.
+
+EXPLANATORY NOTES (Please also refer to manual of ATS procedures) 
+
+GENERAL: 	Try to complete all boxes. If NOT APPLICABLE use N/A, or if NOT KNOWN use N/K. Jargon and uncommon abbreviations are to be avoided.
+
+BOX 2:	Location where the Occurrence happened.
+
+BOX 5: 	The period over which the Occurrence condition existed. Instantaneous, indefinite or unknown classifications must be identified.
+
+BOX 6: 	The facility type must be ticked or stated.
+
+BOX 7: 	More than one element could be circled.
+
+DETAILS OF THE EQUIPMENT ATTRIBUTING TO THE OCCURRENCE
+
+BOX 9: 	Frequency (Radio) appropriate to equipment and occurrence, if applicable.
+
+BOX 10: 	Callsign - NAVAID identification, SSR code or RTF callsign.
+
+BOX 11: 	Location - identify station or other physical location of equipment.
+
+BOX 12: 	More than one element could be identified. Additional channels, diversity, etc. must be stated where applicable. External information source completed with equipment and/or the station/location.
+
+BOX 13: 	More than one element could be ticked. The categories apply to the subject equipment at the time of the Occurrence.
+
+BOX 15: 	Identification of appropriate RTF frequencies/radar source is necessary to secure recordings which may be vital to subsequent investigations.
+
+BOX 17: 	If records impounded, state source, effective date and retaining station.
+
+BOX 19: 	Other fault reporting action, including contact with agencies, must be stated. It is important to ensure that any involved agency is informed of the reporting action. Normal, immediate fault action takes precedence over MOR reporting action.
+
+ACKNOWLEDGEMENT OF REPORTS
+
+If, acknowledgement of reports is required, please contact the CAAK direct on e-mail: mor@caa-ks.org or mobile number: +377 (0)44 613 567.
+
+UNIT MANAGEMENT ACTION
+
+Reporters are requested to send a copy to the Unit Management. This is for local assessment and any immediate follow-up action. Additional input and/or covering comment from Unit Management is highly desirable for both Safety Data evaluation and any follow-up investigation.
+
+CONFIDENTIAL REPORTS
+
+An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. BOXES 20 to 26 should be completed. The CAAK will respect the confidentiality and contact you personally.
+
+							
+						</div>
+						<div class="modal-footer">
+							 
+							<button type="button" class="btn btn-default" data-dismiss="modal">
+								Close
+							</button> 
+							
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+	<p>
+		Civil Aviation Authority of Kosovo (CAAK)
+		Ahmet Krasniqi Street n.n. (Arbëria)
+		10000, Prishtina
+		Kosovo
+		E-mail: mor@caa-ks.org
+		Fax: +381 (0)38 211 009,  Mob: +377 (0)44 613 567
+	</p>
+</footer>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
